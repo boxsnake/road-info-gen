@@ -22,15 +22,19 @@ const VITE_DEV_SERVER_URL = process.env['VITE_DEV_SERVER_URL']
 function createWindow() {
   win = new BrowserWindow({
     icon: path.join(process.env.VITE_PUBLIC, 'logo.svg'),
+    minWidth: 800,
+    minHeight: 600,
+    maxWidth: 1920,
+    maxHeight: 1080,
+    width: 1280,
+    height: 720,
     webPreferences: {
+      devTools: app.isPackaged ? false : true,
       preload: path.join(__dirname, 'preload.js'),
     },
   })
 
-  // Test active push message to Renderer-process.
-  win.webContents.on('did-finish-load', () => {
-    win?.webContents.send('main-process-message', new Date().toLocaleString())
-  })
+  win.setMenuBarVisibility(false)
 
   if (VITE_DEV_SERVER_URL) {
     win.loadURL(VITE_DEV_SERVER_URL)

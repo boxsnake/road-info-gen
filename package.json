@@ -11,12 +11,15 @@
     "svgo": "svgo -r -f ./public -f ./src"
   },
   "dependencies": {
+    "element-plus": "^2.5.6",
+    "pinia": "^2.1.7",
     "vue": "^3.3.4"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^7.1.0",
     "@typescript-eslint/parser": "^7.1.0",
     "@vitejs/plugin-vue": "^4.3.4",
+    "autoprefixer": "^10.4.17",
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",
     "electron": "^26.1.0",
@@ -26,7 +29,9 @@
     "eslint-plugin-prettier": "^5.1.3",
     "eslint-plugin-vue": "^9.22.0",
     "prettier": "^3.2.5",
+    "sass": "^1.71.1",
     "svgo": "^3.2.0",
+    "tailwindcss": "^3.4.1",
     "typescript": "^5.2.2",
     "vite": "^4.4.9",
     "vite-plugin-electron": "^0.14.0",
