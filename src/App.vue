@@ -1,5 +1,13 @@
 <script setup lang="ts">
+import { useDark } from '@vueuse/core'
 import { SignPanel, SignPreview } from './components'
+
+useDark({
+  selector: 'html',
+  attribute: 'class',
+  valueDark: 'dark',
+  valueLight: 'light',
+})
 </script>
 
 <template>

@@ -11,6 +11,7 @@
     "svgo": "svgo -r -f ./public -f ./src"
   },
   "dependencies": {
+    "@vueuse/core": "^10.9.0",
     "element-plus": "^2.5.6",
     "pinia": "^2.1.7",
     "vue": "^3.3.4"
