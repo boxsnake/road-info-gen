@@ -1,2 +1,5 @@
+export { default as SvgIcon } from './SvgIcon/SvgIcon.vue'
+export { default as SelectList } from './SelectList/SelectList.vue'
+export { default as LangSwitcher } from './LangSwitcher/LangSwitcher.vue'
 export { default as SignPanel } from './SignPanel/SignPanel.vue'
 export { default as SignPreview } from './SignPreview/SignPreview.vue'
