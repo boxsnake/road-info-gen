@@ -1,16 +1,14 @@
 <script setup lang="ts">
 import { defineModel } from 'vue'
-import { SelectList } from '..'
+import { useLocale } from '@/hooks'
+import { SelectList } from '@/components'
+
+const { list: localeList } = useLocale()
 
 const modelValue = defineModel<boolean>('modelValue', {
   required: true,
   default: false,
 })
-
-const langs = [
-  { locale: 'en', label: 'English' },
-  { locale: 'zh-hans', label: '简体中文' },
-]
 </script>
 
 <template>
@@ -19,7 +17,7 @@ const langs = [
     class="min-w-[10vw] max-w-[300px] w-[20vw]"
     align-center
   >
-    <SelectList v-model="$i18n.locale" :list="langs" value-key="locale">
+    <SelectList v-model="$i18n.locale" :list="localeList" value-key="locale">
       <template #default="{ item }">
         {{ item.label }}
       </template>
