@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import { ref, computed, defineModel } from 'vue'
-import { useI18n } from 'vue-i18n'
+import { ref, defineModel } from 'vue'
+import { useRegion } from '@/hooks'
 import { useModelStore } from '@/stores'
 import { SelectList, FlagIcon } from '@/components'
 
-const { t } = useI18n()
 const { updateRegion } = useModelStore()
+const { list: regionOptions } = useRegion()
 
 const modelValue = defineModel({
   type: Boolean,
@@ -15,10 +15,6 @@ const modelValue = defineModel({
 const emits = defineEmits<{
   'update:modelValue': [v: boolean]
 }>()
-
-const regionOptions = computed(() => {
-  return [{ name: 'Japan', label: t('regionSelector.label.japan') }]
-})
 
 const selectedRegion = ref('')
 
@@ -50,7 +46,7 @@ const handleConfirm = () => {
         <FlagIcon class="flag" :name="item.name"></FlagIcon>
       </template>
       <template #default="{ item }">
-        <div class="label">{{ item.label }}</div>
+        <div class="label">{{ $t(item.labelTag) }}</div>
       </template>
     </SelectList>
 
