@@ -3,14 +3,15 @@ export interface I18nSchema {
     button: {
       confirm: string
       cancel: string
+      select: string
     }
   }
   globalToolbar: {
     changeLocale: string
   }
   regionSelector: {
-    selectRegion: string
-    label: {
+    rowLabel: string
+    regionLabel: {
       japan: string
     }
   }

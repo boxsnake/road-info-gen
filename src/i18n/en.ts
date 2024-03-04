@@ -5,14 +5,15 @@ export const en: I18nSchema = {
     button: {
       confirm: 'Confirm',
       cancel: 'Cancel',
+      select: 'Select',
     },
   },
   globalToolbar: {
     changeLocale: 'Change Locale',
   },
   regionSelector: {
-    selectRegion: 'Select Country / Region',
-    label: {
+    rowLabel: 'Country/Region: ',
+    regionLabel: {
       japan: 'Japan',
     },
   },

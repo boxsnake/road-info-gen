@@ -5,14 +5,15 @@ export const zhHans: I18nSchema = {
     button: {
       confirm: '确定',
       cancel: '取消',
+      select: '选择',
     },
   },
   globalToolbar: {
     changeLocale: '更换语言',
   },
   regionSelector: {
-    selectRegion: '选择国家/地区',
-    label: {
+    rowLabel: '国家/地区：',
+    regionLabel: {
       japan: '日本',
     },
   },

@@ -1,12 +1,19 @@
 import { keyBy } from 'lodash'
 
-const regionList = [{ name: 'Japan', labelTag: 'regionSelector.label.japan' }]
+interface RegionOption {
+  name: string
+  labelTag: string
+}
+
+const regionList: RegionOption[] = [
+  { name: 'Japan', labelTag: 'regionSelector.regionLabel.japan' },
+]
 
 const regionMap = keyBy(regionList, 'name')
 
 export const useRegion = () => {
-  const getRegion = (regionName: string): Record<string, unknown> =>
-    regionMap[regionName] ?? {}
+  const getRegion = (regionName: string): RegionOption =>
+    regionMap[regionName] ?? { name: '', labelTag: '' }
 
   return {
     list: regionList,
