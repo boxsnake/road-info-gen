@@ -9,7 +9,18 @@ export const useModelStore = defineStore('model-store', () => {
     options: {},
   })
 
+  const updateRegion = (regionName: string) => {
+    if (_model.value.regionName === regionName) {
+      return
+    }
+    _model.value.regionName = regionName as Model['regionName']
+    _model.value.modelName = ''
+    _model.value.options = {}
+  }
+
   return {
     model: _model,
+
+    updateRegion,
   }
 })

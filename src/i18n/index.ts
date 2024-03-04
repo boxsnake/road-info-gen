@@ -3,6 +3,7 @@ import type { I18nSchema, I18nLocale } from './types'
 import { enUs, zhCn } from './locale'
 
 const i18n = createI18n<[I18nSchema], I18nLocale>({
+  legacy: false,
   locale: 'en-US',
   fallbackLocale: 'en-US',
   messages: {
