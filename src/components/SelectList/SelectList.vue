@@ -3,7 +3,7 @@
   lang="ts"
   generic="T extends Record<string, unknown>, K extends keyof T, V extends T[K]"
 >
-import { defineProps, defineEmits, defineModel } from 'vue'
+import { defineModel } from 'vue'
 
 const props = defineProps<{
   list: T[]

@@ -1,6 +1,6 @@
 import { progressProps } from 'element-plus'; import { computed } from 'vue';
 <script setup lang="ts">
-import { computed, defineProps } from 'vue'
+import { computed } from 'vue'
 import { IconI18n } from '.'
 
 const props = defineProps<{
