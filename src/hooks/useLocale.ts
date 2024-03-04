@@ -1,6 +1,6 @@
 import { keyBy } from 'lodash'
 
-interface LocaleOption {
+interface LocaleOption extends Record<string, unknown> {
   locale: string
   label: string
 }

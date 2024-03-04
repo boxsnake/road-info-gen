@@ -1,6 +1,6 @@
 import { keyBy } from 'lodash'
 
-interface RegionOption {
+interface RegionOption extends Record<string, unknown> {
   name: string
   labelTag: string
 }

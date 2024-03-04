@@ -75,5 +75,7 @@ const handleConfirm = () => {
 .label {
   flex: auto;
   padding-left: 0.5rem;
+  white-space: normal;
+  word-break: break-all;
 }
 </style>

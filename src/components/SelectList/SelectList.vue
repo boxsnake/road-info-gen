@@ -51,6 +51,7 @@ const patchValue = (patchOpt: T) => {
 <style lang="scss" scoped>
 .list-row {
   display: flex;
+  align-items: flex-start;
   cursor: pointer;
   color: var(--el-text-color-regular);
   outline: none;

@@ -13,15 +13,14 @@ const regionInfo = computed(() => getRegion(model.regionName))
 </script>
 
 <template>
-  <div class="flex gap-2 items-center">
-    <span class="flex-none">
+  <div class="flex gap-2 items-start">
+    <span class="flex-auto">
       {{ $t('regionSelector.rowLabel') }}
       <el-icon class="flag">
         <FlagIcon :name="model.regionName"></FlagIcon>
       </el-icon>
-      {{ $t(regionInfo.labelTag) }}
+      <span class="break-all">{{ $t(regionInfo.labelTag) }}</span>
     </span>
-    <span class="flex-auto"></span>
     <el-button
       class="flex-none"
       type="primary"
@@ -38,7 +37,7 @@ const regionInfo = computed(() => getRegion(model.regionName))
 .flag {
   display: inline-block;
   width: 2rem;
-  margin: 0 0.2rem;
+  margin: 0 0.4rem;
   vertical-align: baseline;
 }
 </style>
