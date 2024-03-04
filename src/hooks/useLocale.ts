@@ -9,7 +9,7 @@ const localeMap = keyBy(localeList, 'locale')
 
 export const useLocale = () => {
   const getLocale = (locale: string): Record<string, unknown> =>
-    localeList[locale] ?? {}
+    localeMap[locale] ?? {}
 
   return {
     list: localeList,
