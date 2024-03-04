@@ -16,4 +16,4 @@ export interface I18nSchema {
   }
 }
 
-export type I18nLocale = 'en-US' | 'zh-CN'
+export type I18nLocale = 'en' | 'zh-hans'

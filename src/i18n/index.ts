@@ -1,14 +1,14 @@
 import { createI18n } from 'vue-i18n'
 import type { I18nSchema, I18nLocale } from './types'
-import { enUs, zhCn } from './locale'
+import { en, zhHans } from './locale'
 
 const i18n = createI18n<[I18nSchema], I18nLocale>({
   legacy: false,
-  locale: 'en-US',
-  fallbackLocale: 'en-US',
+  locale: 'en',
+  fallbackLocale: 'en',
   messages: {
-    'en-US': enUs,
-    'zh-CN': zhCn,
+    en: en,
+    'zh-hans': zhHans,
   },
   missing: () => '',
 })

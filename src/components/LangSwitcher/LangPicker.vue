@@ -8,8 +8,8 @@ const modelValue = defineModel<boolean>('modelValue', {
 })
 
 const langs = [
-  { locale: 'en-US', label: 'English' },
-  { locale: 'zh-CN', label: '简体中文' },
+  { locale: 'en', label: 'English' },
+  { locale: 'zh-hans', label: '简体中文' },
 ]
 </script>
 
@@ -19,11 +19,7 @@ const langs = [
     class="min-w-[10vw] max-w-[300px] w-[20vw]"
     align-center
   >
-    <SelectList
-      v-model="$i18n.locale as string"
-      :list="langs"
-      value-key="locale"
-    >
+    <SelectList v-model="$i18n.locale" :list="langs" value-key="locale">
       <template #default="{ item }">
         {{ item.label }}
       </template>

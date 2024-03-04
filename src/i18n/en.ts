@@ -1,6 +1,6 @@
 import type { I18nSchema } from './types'
 
-export const enUs: I18nSchema = {
+export const en: I18nSchema = {
   common: {
     button: {
       confirm: 'Confirm',
