@@ -1,15 +1,16 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
+import { storeToRefs } from 'pinia'
 import { useModelStore } from '@/stores'
 import { useRegion } from '@/hooks'
 import { FlagIcon, RegionSelector } from '@/components'
 
-const { model } = useModelStore()
+const { model } = storeToRefs(useModelStore())
 const { getRegion } = useRegion()
 
 const regionSelectorVisible = ref(false)
 
-const regionInfo = computed(() => getRegion(model.regionName))
+const regionInfo = computed(() => getRegion(model.value.regionName))
 </script>
 
 <template>

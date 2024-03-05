@@ -1,9 +1,17 @@
 // ==================== 模型选项 ====================
-interface BaseOption {}
+interface BaseOption {
+  regionName: string
+  modelName: string
+}
 
-interface DummyOption extends BaseOption {}
+export interface DummyOption extends BaseOption {
+  regionName: ''
+  modelName: ''
+}
 
-interface JapanRoadNumberOption extends BaseOption {
+export interface JapanRoadNumberOption extends BaseOption {
+  regionName: 'Japan'
+  modelName: 'RoadNumber'
   leftArrow: boolean
   rightArrow: boolean
   bgColor: 'yellow' | 'green' | 'pink'
@@ -11,24 +19,12 @@ interface JapanRoadNumberOption extends BaseOption {
   number?: number
 }
 
-// ==================== 模型配置 ====================
-interface BaseModel {
-  regionName: string
-  modelName: string
-  options: BaseOption
-}
-
-export interface DummyModel extends BaseModel {
-  regionName: ''
-  modelName: ''
-  options: DummyOption
-}
-
-export interface JapanRoadNumberModel extends BaseModel {
-  regionName: 'Japan'
-  modelName: 'RoadNumber'
-  options: JapanRoadNumberOption
-}
-
 // ==================== 模型结构 ====================
-export type Model = DummyModel | JapanRoadNumberModel
+export type ModelMap = {
+  '': DummyOption
+  japanRoadNumber: JapanRoadNumberOption
+}
+
+export type ModelMapKeys = keyof ModelMap
+
+export type ModelTypes = ModelMap[ModelMapKeys]
